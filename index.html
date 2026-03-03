@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeTask | Terminal Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="6.css">
+</head>
+<body>
+
+    <div class="todo-container">
+        <header>
+            <h1>TASK MANAGER</h1>
+            <p>Enter new task</p>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="taskInput" placeholder="TYPE TASK..." autocomplete="off">
+            <button id="addBtn">ADD</button>
+        </div>
+
+        <ul id="taskList">
+            </ul>
+        
+        <div id="emptyMessage" class="status-msg">
+            STATUS: NO ACTIVE PROCESSES FOUND
+        </div>
+    </div>
+
+    <script src="6.js"></script>
+</body>
+</html>
