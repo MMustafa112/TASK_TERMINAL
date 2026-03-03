@@ -1,0 +1,98 @@
+/* --- Global & Gradient Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+body {
+    background: linear-gradient(135deg, #A2D2FF 0%, #FFD194 100%);
+    font-family: 'Archivo Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Main Container --- */
+.todo-wrapper {
+    background: #FFFFFF;
+    border: 8px solid #000000;
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+/* --- Input Group (Side-by-Side) --- */
+.input-group {
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+input {
+    flex: 1;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.1rem;
+    padding: 15px;
+    background: #FFF;
+    border: 6px solid #000;
+    outline: none;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
+}
+
+button#addBtn {
+    font-family: 'Archivo Black', sans-serif;
+    background: #FF5722;
+    color: #000;
+    border: 6px solid #000;
+    padding: 0 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
+    transition: 0.1s;
+}
+
+/* --- Task Items & Bonus Animations --- */
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#taskList { list-style: none; }
+
+.task-item {
+    background: #00FF41; /* Funky Green */
+    border: 6px solid #000;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
+    animation: popIn 0.3s ease-out;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.task-item:hover { transform: translate(-2px, -2px); }
+
+/* Bonus: Completed State */
+.task-item.is-done {
+    background: #EEEEEE;
+    text-decoration: line-through;
+    opacity: 0.6
